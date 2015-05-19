@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-hans" ng-app="myApp">
+  <head>
+    <title><%= title %></title>
+      <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <div class="container">
+
+      <form class="form-signin" action="http://localhost:3000/toMain" method="post">
+          <h2 class="form-signin-heading">登录……</h2>
+
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+          <div class="checkbox">
+              <label>
+                  <input type="checkbox" value="remember-me">记住我
+              </label>
+          </div>
+          <div ng-controller="UserController">
+              <p>用户名：{{user.name}}</p>
+              <p>邮  箱：{{user.email}}</p>
+          </div>
+          <button id="btn1" class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      </form>
+
+  </div> <!-- /container -->
+    <script src="/javascripts/jquery-1.9.1.min.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/angular.js"></script>
+    <script src="/javascripts/jquery.cookies.2.2.0.js"></script>
+    <script src="/javascripts/json2.js"></script>
+    <script src="/biz_js/index.js"></script>
+  </body>
+</html>
